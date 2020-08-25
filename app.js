@@ -23,10 +23,9 @@ const app = express();
 // EJS
 app.set('view engine', 'ejs');
 
-// Public Folder
-app.use(express.static('./public'));
 
-app.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => {
+console.log('Api is runinning')});
 
 app.get('/upload', (req, res) => {
 res.render('upload', {qs: req.query});
