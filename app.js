@@ -33,8 +33,8 @@ res.render('upload', {qs: req.query});
 var x;
 app.post('/upload', urlencodedParser ,(req, res) => {
   //here we already have req.body data
-  // console.log(req.body);
-  // console.log(typeof req.body);
+  console.log(req.body);
+  console.log(typeof req.body);
   // console.log(JSON.stringify(req.body));
   // console.log(typeof JSON.stringify(typeof req.body));
 
