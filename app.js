@@ -3,7 +3,7 @@ const multer = require('multer');
 const ejs = require('ejs');
 const path = require('path');
 const bodyParser = require('body-parser');
-
+var cors = require('cors')
 
 var PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
 var fs = require('fs');
@@ -19,7 +19,7 @@ var personalityInsights = new PersonalityInsightsV3({
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 // Init app
 const app = express();
-
+app.use(cors());
 // EJS
 app.set('view engine', 'ejs');
 
